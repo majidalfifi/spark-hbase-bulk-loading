@@ -26,7 +26,7 @@ import org.apache.spark.storage.StorageLevel
 import scala.collection.JavaConversions._
 import scala.reflect.ClassTag
 
-object HBaseBulkload {
+object HBaseBulkload extends Serializable {
 
   private object HFilePartitioner {
     def apply(conf: Configuration, splits: Array[Array[Byte]], numFilesPerRegionPerFamily: Int) = {
